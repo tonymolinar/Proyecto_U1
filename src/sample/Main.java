@@ -8,11 +8,16 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    public static Stage stage;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        stage=primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("Inicio/inicio.fxml"));
+        primaryStage.setTitle("Vacunate.org");
+        primaryStage.setMaximized(false);
+        primaryStage.setResizable(false);
+        primaryStage.setScene(new Scene(root, 900, 600));
         primaryStage.show();
     }
 

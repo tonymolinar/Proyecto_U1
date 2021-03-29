@@ -1,0 +1,55 @@
+.fondoinicio{
+-fx-background-color: linear-gradient(to bottom right, #c0c9f0, #42c2f5);
+}
+.fondousuario{
+-fx-background-color: linear-gradient(#4282eb 10%,a8c9ff 30%);
+}
+
+.botonVacuna{
+-fx-background-image: url("./IMG/vaccine.png");
+-fx-background-radius: 20px;
+-fx-background-size: cover;
+-fx-background-color: linear-gradient(to bottom right, #90daf5, #57a4f2);
+}
+.botonLocal{
+-fx-background-image: url("./IMG/global.png");
+-fx-background-radius: 20px;
+-fx-background-size: cover;
+-fx-background-color: linear-gradient(to bottom right, #90daf5, #57a4f2);
+}
+.botonDiagno{
+-fx-background-image: url("./IMG/heart.png");
+-fx-background-radius: 20px;
+-fx-background-size: cover;
+-fx-background-color: linear-gradient(to bottom right, #90daf5, #57a4f2);
+}
+.botonUser{
+-fx-background-image: url("./IMG/user.png");
+-fx-background-radius: 20px;
+-fx-background-size: cover;
+-fx-background-color: linear-gradient(to bottom right, #90daf5, #57a4f2);
+}
+.botonInfo{
+-fx-background-image: url("./IMG/prescription.png");
+-fx-background-radius: 20px;
+-fx-background-size: cover;
+-fx-background-color: linear-gradient(to bottom right, #90daf5, #57a4f2);
+}
+.titulo1{
+-fx-text-fill: red;
+-fx-border-color: blue;
+}
+
+.fondolocal{
+-fx-background-color: linear-gradient(#0c912deb 10%,#4ced74 30%);
+}
+
+.fondovacuna{
+-fx-background-color: linear-gradient(#ffd738 10%,#fafc68 30%);
+}
+.btnaceptar{
+-fx-background-color: #04c411;
+}
+.btnrechazar{
+-fx-background-color: #ff3838;
+}
