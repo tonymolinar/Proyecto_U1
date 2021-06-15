@@ -2,12 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane fx:id="pane" prefHeight="500.0" prefWidth="500.0" styleClass="fondousuario" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Usuario.Usuario">
    <children>
@@ -16,40 +16,37 @@
             <Image url="@../IMG/user.png" />
          </image>
       </ImageView>
-      <Label layoutX="205.0" layoutY="62.0" text="REGISTRARSE">
+      <Label layoutX="215.0" layoutY="28.0" prefHeight="124.0" prefWidth="179.0" text="INICIAR &#10;SESION">
          <font>
             <Font name="Calibri" size="48.0" />
          </font>
       </Label>
-      <TextField fx:id="txtnombre" alignment="CENTER" layoutX="175.0" layoutY="228.0" prefHeight="30.0" prefWidth="150.0" promptText="Nombre(s)">
+      <TextField fx:id="txtnombre" alignment="CENTER" editable="false" layoutX="175.0" layoutY="228.0" prefHeight="30.0" prefWidth="150.0" promptText="Nombre(s)">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtapellido" alignment="CENTER" layoutX="175.0" layoutY="267.0" prefHeight="30.0" prefWidth="150.0" promptText="Apellido(s)">
+      <TextField fx:id="txtapellido" alignment="CENTER" editable="false" layoutX="175.0" layoutY="267.0" prefHeight="30.0" prefWidth="150.0" promptText="Apellido(s)">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtedad" alignment="CENTER" layoutX="175.0" layoutY="306.0" prefHeight="30.0" prefWidth="150.0" promptText="Edad">
+      <TextField fx:id="txtemail" alignment="CENTER" layoutX="175.0" layoutY="323.0" prefHeight="30.0" prefWidth="150.0" promptText="Email">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txttelefono" alignment="CENTER" layoutX="175.0" layoutY="347.0" prefHeight="30.0" prefWidth="150.0" promptText="Teléfono">
+      <TextField fx:id="txtusuario" alignment="CENTER" editable="false" layoutX="175.0" layoutY="176.0" prefHeight="30.0" prefWidth="150.0" promptText="Usuario">
          <font>
             <Font name="Calibri" size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtusuario" alignment="CENTER" layoutX="175.0" layoutY="176.0" prefHeight="30.0" prefWidth="150.0" promptText="Usuario">
-         <font>
-            <Font name="Calibri" size="14.0" />
-         </font>
-      </TextField>
-      <Button layoutX="171.0" layoutY="409.0" mnemonicParsing="false" onAction="#registrar" text="REGISTRAR">
+      <Button layoutX="197.0" layoutY="410.0" mnemonicParsing="false" onAction="#registrar" text="LOGIN">
          <font>
             <Font size="25.0" />
          </font>
       </Button>
+      <PasswordField fx:id="txtpassword" alignment="CENTER" layoutX="176.0" layoutY="359.0" promptText="password" />
+      <Button layoutX="349.0" layoutY="425.0" mnemonicParsing="false" onAction="#verificar" text="Verificar" />
    </children>
 </AnchorPane>

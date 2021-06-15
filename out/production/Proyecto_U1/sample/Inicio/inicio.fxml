@@ -2,23 +2,25 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="fondoinicio" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Inicio.Inicio">
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" styleClass="fondoinicio" stylesheets="@../estilos.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Inicio.Inicio">
    <children>
-      <Button fx:id="bvacuna" layoutX="51.0" layoutY="178.0" mnemonicParsing="false" onAction="#cambiarVacunas" onMouseEntered="#mostrarinfovac" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonVacuna" stylesheets="@../estilos.css" />
-      <Button fx:id="bloca" layoutX="51.0" layoutY="307.0" mnemonicParsing="false" onAction="#cambiarLugares" onMouseEntered="#mostrarinfoloc" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonLocal" stylesheets="@../estilos.css" />
-      <Button fx:id="bdiag" layoutX="53.0" layoutY="442.0" mnemonicParsing="false" onAction="#cambiarDiagnostico" onMouseEntered="#mostrarinfodia" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonDiagno" stylesheets="@../estilos.css" />
+      <Button fx:id="bvacuna" disable="true" layoutX="51.0" layoutY="178.0" mnemonicParsing="false" onAction="#cambiarVacunas" onMouseEntered="#mostrarinfovac" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonVacuna" stylesheets="@../estilos.css" />
+      <Button fx:id="bloca" disable="true" layoutX="51.0" layoutY="307.0" mnemonicParsing="false" onAction="#cambiarLugares" onMouseEntered="#mostrarinfoloc" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonLocal" stylesheets="@../estilos.css" />
+      <Button fx:id="bdiag" disable="true" layoutX="53.0" layoutY="442.0" mnemonicParsing="false" onAction="#cambiarDiagnostico" onMouseEntered="#mostrarinfodia" onMouseExited="#cerrarinfo" prefHeight="100.0" prefWidth="100.0" styleClass="botonDiagno" stylesheets="@../estilos.css" />
       <ImageView fitHeight="107.0" fitWidth="121.0" layoutX="42.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../IMG/caduceus-symbol.png" />
          </image></ImageView>
-      <Button layoutX="740.0" layoutY="29.0" mnemonicParsing="false" onAction="#pantallaUsuario" prefHeight="100.0" prefWidth="100.0" styleClass="botonUser" stylesheets="@../estilos.css" />
-      <Button layoutX="742.0" layoutY="446.0" mnemonicParsing="false" onAction="#mostrarRegistro" prefHeight="100.0" prefWidth="100.0" styleClass="botonInfo" stylesheets="@../estilos.css" />
+      <Button layoutX="716.0" layoutY="22.0" mnemonicParsing="false" onAction="#pantallaUsuario" prefHeight="100.0" prefWidth="100.0" styleClass="botonUser" stylesheets="@../estilos.css" />
+      <Button layoutX="710.0" layoutY="448.0" mnemonicParsing="false" onAction="#mostrarRegistro" prefHeight="100.0" prefWidth="100.0" styleClass="botonInfo" stylesheets="@../estilos.css" />
       <Label layoutX="185.0" layoutY="35.0" prefHeight="94.0" prefWidth="450.0" text="Vacunate.org">
          <font>
             <Font name="Cambria Bold" size="65.0" />
@@ -34,11 +36,43 @@
             <Font name="Bell MT" size="25.0" />
          </font>
       </TextArea>
-      <TextArea fx:id="textousuario" layoutX="698.0" layoutY="151.0" prefHeight="278.0" prefWidth="187.0" wrapText="true" />
+      <TextArea fx:id="textousuario" editable="false" layoutX="669.0" layoutY="156.0" prefHeight="278.0" prefWidth="187.0" wrapText="true" />
       <Label layoutX="85.0" layoutY="561.0" text="Para visualizar su registro favor de completar todos los datos (usuario, vacunación, localizaciones y diagnostico).">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
+      <TextField fx:id="txtusuario" alignment="CENTER" layoutX="950.0" layoutY="77.0" promptText="Usuario">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtvacuna" alignment="CENTER" layoutX="950.0" layoutY="110.0" promptText="Vacuna">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtlugar" alignment="CENTER" layoutX="950.0" layoutY="144.0" promptText="Lugar">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtdiagnostico" alignment="CENTER" layoutX="950.0" layoutY="177.0" promptText="Diagnostico">
+         <font>
+            <Font name="Cambria" size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="946.0" layoutY="-3.0" prefHeight="94.0" prefWidth="212.0" text="REGISTROS">
+         <font>
+            <Font name="Cambria Bold" size="33.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="865.0" layoutY="308.0" prefHeight="200.0" prefWidth="329.0" />
+      <Button layoutX="973.0" layoutY="238.0" mnemonicParsing="false" onAction="#insertar" text="INSERTAR">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="724.0" layoutY="128.0" mnemonicParsing="false" onAction="#desbloq" text="Desbloquear" />
    </children>
 </AnchorPane>

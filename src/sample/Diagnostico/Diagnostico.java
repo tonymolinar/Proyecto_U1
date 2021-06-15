@@ -16,22 +16,22 @@ public class Diagnostico {
     public void si(ActionEvent event) throws IOException {
         inicio.registrarDiagnostico(1);
         Parent root = FXMLLoader.load(getClass().getResource("../Inicio/inicio.fxml"));
-        Main.stage.setScene(new Scene(root,900,600));
+        Main.stage.setScene(new Scene(root,1200,600));
         Main.stage.setTitle("Vacunate.org");
         Main.stage.setResizable(false);
         Main.stage.setMaximized(false);
-        Main.stage.setX(200);
+        Main.stage.setX(20);
 
 
     }
     public void no(ActionEvent event)throws IOException{
         inicio.registrarDiagnostico(2);
         Parent root = FXMLLoader.load(getClass().getResource("../Inicio/inicio.fxml"));
-        Main.stage.setScene(new Scene(root,900,600));
+        Main.stage.setScene(new Scene(root,1200,600));
         Main.stage.setTitle("Vacunate.org");
         Main.stage.setResizable(false);
         Main.stage.setMaximized(false);
-        Main.stage.setX(200);
+        Main.stage.setX(20);
 
     }
 

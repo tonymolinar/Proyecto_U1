@@ -17,7 +17,7 @@ public class Main extends Application {
         primaryStage.setTitle("Vacunate.org");
         primaryStage.setMaximized(false);
         primaryStage.setResizable(false);
-        primaryStage.setScene(new Scene(root, 900, 600));
+        primaryStage.setScene(new Scene(root, 1200, 600));
         primaryStage.show();
     }
 

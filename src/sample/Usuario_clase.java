@@ -5,15 +5,15 @@ public class Usuario_clase {
     String usuario;
     String nombre;
     String apellido;
-    int edad;
-    String telefono;
+    String password;
+    String email;
 
-    public Usuario_clase(String usuario, String nombre, String apellido, int edad, String telefono) {
+    public Usuario_clase(String usuario, String nombre, String apellido, String password, String email) {
         this.usuario = usuario;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
-        this.telefono = telefono;
+        this.password = password;
+        this.email = email;
     }
 
     public String getUsuario() {
@@ -40,19 +40,19 @@ public class Usuario_clase {
         this.apellido = apellido;
     }
 
-    public int getEdad() {
-        return edad;
+    public String getPassword() {
+        return password;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
+    public void setEdad(String edad) {
+        this.password = edad;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getEmail() {
+        return email;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setEmail(String telefono) {
+        this.email = telefono;
     }
 }
